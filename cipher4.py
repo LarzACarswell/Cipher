@@ -31,15 +31,16 @@ for i in range(0, len(letterList)):
 for i in range(0, len(letterList)):
     cipherDict2[wordList[i]]=letterList[i]
 
+
+#----------Encrypt message----------------
 def encryptWords(msg):
     tempString = ""
     msg1 = cipher3.encrypt(msg, 10)
     for let in msg1:
         tempString+=cipherDict[let]+" "
     return tempString
-outString = encryptWords(message)
 
-print outString
+#----------Decrypt message----------------
 def decryptWords(msg):
     tempString = msg.split(" ")
     #print tempString
@@ -50,5 +51,8 @@ def decryptWords(msg):
     encryptedString = "".join(tempString)
     
     return cipher3.decrypt(encryptedString,10)
+
+#Test the functions
+outString = encryptWords(message)
 decryptedString = decryptWords(outString)
-print decryptedString
+print "{0}\n\n{1}".format(message,decryptedString)

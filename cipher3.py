@@ -1,7 +1,6 @@
 import string
 import math
-#alp = string.ascii_letters[0:26]+string.digits+string.whitespace+"'.;:!@#$%^&*()_-+="
-alp=string.printable
+alp=r"{0}".format(string.printable)
 
 def encrypt(str1, key):
     offset = key
