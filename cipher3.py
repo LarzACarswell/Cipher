@@ -7,7 +7,8 @@ def encrypt(str1, key):
     tempstring = ""
     tempstring2 = ""
     for i in range(0,len(str1)):
-        char = str1[i].lower()
+        #char = str1[i].lower()
+        char = str1[i]
         for j in range(0,len(alp)):
             if char==alp[j]:
                 offset+=1
